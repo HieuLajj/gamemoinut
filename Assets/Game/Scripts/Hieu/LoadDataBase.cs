@@ -81,7 +81,10 @@ public struct Nail
     public string TypeCrew;
     public string material;
     public Ice Ice;
-
+}
+[System.Serializable]
+public struct Holes{
+    public int numbers;
 }
 [System.Serializable]
 public struct Bg
@@ -460,8 +463,7 @@ public class LoadDataBase : MonoBehaviour
         }
     }
    private void TextProcess(string str)
-   {
-        Debug.Log(str);
+   {    
         if (str.StartsWith("tut:"))
         {
             HandTutEditString(str);
@@ -508,17 +510,17 @@ public class LoadDataBase : MonoBehaviour
             CreatePhysic2dforboard();
             CheckBoardSetupMap();
             ControllerHieu.Instance.nailLayerController.SetupLayerBoard();
-            Timer.instance.Reset();
-            if (LevelController.Instance.LevelDifficule)
-            {
-                HardSupport.Instance.Setup();
-                LevelController.Instance.totalWood += ControllerHieu.Instance.rootlevel.listboard.Count;
+//            Timer.instance.Reset();
+            // if (LevelController.Instance.LevelDifficule)
+            // {
+            //     HardSupport.Instance.Setup();
+            //     LevelController.Instance.totalWood += ControllerHieu.Instance.rootlevel.listboard.Count;
 
-            }
-            else
-            {
-                LevelController.Instance.totalWood = ControllerHieu.Instance.rootlevel.listboard.Count;  
-            }
+            // }
+            // else
+            // {
+            //     LevelController.Instance.totalWood = ControllerHieu.Instance.rootlevel.listboard.Count;  
+            // }
 
         //}
         //catch (Exception e)
@@ -833,7 +835,13 @@ public class LoadDataBase : MonoBehaviour
                 break;
             case "txt":
                 HandSavableEditString_Txt(strings[1]);
-                break;         
+                break; 
+            case "holes":    
+                HandSavableEditString_Holes(strings[1]);
+                break;
+            case "boxs":
+                HandSavableEditString_Boxs(strings[1]);
+                break;
         }
     }
     //private void HandSavableEditString_Ad(string str)
@@ -859,6 +867,17 @@ public class LoadDataBase : MonoBehaviour
       
         CheckTimeSetUpMap();
     }
+    private void HandSavableEditString_Holes(string str)
+    {
+        Holes holes = JsonUtility.FromJson<Holes>(str);
+        HolesFreeSystem.Instance.SetupNumbers(holes.numbers);
+        CheckTimeSetUpMap();
+    }
+     private void HandSavableEditString_Boxs(string str)
+    {
+        Debug.Log(str);
+        CheckTimeSetUpMap();
+    }
 
 
     private string[] DoubleStringEditNameandValue(string str)
@@ -881,7 +900,7 @@ public class LoadDataBase : MonoBehaviour
         switch (str)
         {
             case "tile17":
-                boardItem = BarSpawner.Instance._pool.Get();
+                boardItem = tile17Spawner.Instance._pool.Get();
                 break;
             case "wavy":
                boardItem = WavySpawner.Instance._pool.Get();
