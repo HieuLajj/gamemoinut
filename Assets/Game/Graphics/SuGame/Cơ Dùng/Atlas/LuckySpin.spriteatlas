@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LuckySpin
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: d06fa0f5448285c4482a0326dcbffcb3, type: 3}
+    - {fileID: 2800000, guid: 2a0eb35795ba71849b0c859452908d8b, type: 3}
+    - {fileID: 2800000, guid: 1c23e8edfdf6f0c42bc9d41a76699316, type: 3}
+    - {fileID: 2800000, guid: f72d6149306891047a3d2d56e6973525, type: 3}
+    - {fileID: 2800000, guid: 279efdfdcd7434c468e5a67c3f141b71, type: 3}
+    - {fileID: 2800000, guid: 5fb3299cfb0c8e146935560be17eab81, type: 3}
+    - {fileID: 2800000, guid: 5d7dc6c6a12b1ac4b9c4dba145afb718, type: 3}
+    - {fileID: 2800000, guid: 948b0a44e57ec7b4d97842170a83404e, type: 3}
+    - {fileID: 2800000, guid: 235779735b45cf3429e5a1f4f6a9def4, type: 3}
+    - {fileID: 2800000, guid: fd856490fed3e674a9b67800dec55a75, type: 3}
+    - {fileID: 2800000, guid: 58fbfdeeba037b748ad661cd954ce258, type: 3}
+    - {fileID: 2800000, guid: 265ee54b97ba90646aecdee2e503937c, type: 3}
+    - {fileID: 2800000, guid: 91d406bde7b4b4f40b2451ce4f854690, type: 3}
+    - {fileID: 2800000, guid: 00e9f2168c986054cbe61a9984d315dc, type: 3}
+    - {fileID: 2800000, guid: 4035c6fa38b1c9745bf618be1712bb0b, type: 3}
+    - {fileID: 2800000, guid: 91bf24e62015f83499be71997acb8c19, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: fd856490fed3e674a9b67800dec55a75, type: 3}
+  - {fileID: 21300000, guid: 235779735b45cf3429e5a1f4f6a9def4, type: 3}
+  - {fileID: 21300000, guid: 948b0a44e57ec7b4d97842170a83404e, type: 3}
+  - {fileID: 21300000, guid: d06fa0f5448285c4482a0326dcbffcb3, type: 3}
+  - {fileID: 21300000, guid: 00e9f2168c986054cbe61a9984d315dc, type: 3}
+  - {fileID: 21300000, guid: 5d7dc6c6a12b1ac4b9c4dba145afb718, type: 3}
+  - {fileID: 21300000, guid: 91bf24e62015f83499be71997acb8c19, type: 3}
+  - {fileID: 21300000, guid: 2a0eb35795ba71849b0c859452908d8b, type: 3}
+  - {fileID: 21300000, guid: f72d6149306891047a3d2d56e6973525, type: 3}
+  - {fileID: 21300000, guid: 4035c6fa38b1c9745bf618be1712bb0b, type: 3}
+  - {fileID: 21300000, guid: 265ee54b97ba90646aecdee2e503937c, type: 3}
+  - {fileID: 21300000, guid: 5fb3299cfb0c8e146935560be17eab81, type: 3}
+  - {fileID: 21300000, guid: 91d406bde7b4b4f40b2451ce4f854690, type: 3}
+  - {fileID: 21300000, guid: 1c23e8edfdf6f0c42bc9d41a76699316, type: 3}
+  - {fileID: 21300000, guid: 279efdfdcd7434c468e5a67c3f141b71, type: 3}
+  - {fileID: 21300000, guid: 58fbfdeeba037b748ad661cd954ce258, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - screw_2
+  - screw_1
+  - lucky spin
+  - bar_spin_1
+  - ticket_4
+  - coin_3
+  - wheel_2
+  - bar_spin_2
+  - center_1
+  - wheel_1
+  - spin_board_2
+  - coin_2
+  - ticket_3
+  - BG_icon
+  - coin_1
+  - spin_board_1
+  m_RenderDataMap: {}
+  m_Tag: LuckySpin
+  m_IsVariant: 0

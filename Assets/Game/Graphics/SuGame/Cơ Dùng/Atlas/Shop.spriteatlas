@@ -1,0 +1,174 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shop
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 188ed28faf25a0843bb7005eb869dca4, type: 3}
+    - {fileID: 2800000, guid: a9dfd3d8529a7e543944b32b74a3d969, type: 3}
+    - {fileID: 2800000, guid: e02229ae9afd4b24bbaca3ac1fe7b344, type: 3}
+    - {fileID: 2800000, guid: 78aef0600b80a8445a16a261acf5cc8b, type: 3}
+    - {fileID: 2800000, guid: 234e274a237c6b745a2eaa28cae82c14, type: 3}
+    - {fileID: 2800000, guid: 971df235186af534d9e81f0e20f70f03, type: 3}
+    - {fileID: 2800000, guid: 7b3ca6bc9dccd564f93a32a193c0ea63, type: 3}
+    - {fileID: 2800000, guid: 3488a18b556b8424897c3f158d9b5189, type: 3}
+    - {fileID: 2800000, guid: f0d5a8838e5e11f4288593fd243580b9, type: 3}
+    - {fileID: 2800000, guid: 3bda580d24a3a0049ba8d3113b17822e, type: 3}
+    - {fileID: 2800000, guid: da347a3dfa746c14399b59d814605c6c, type: 3}
+    - {fileID: 2800000, guid: 1785f757ee2ebc449aabfebc2c925081, type: 3}
+    - {fileID: 2800000, guid: e48a55a3f558f0b4c9ee408869b2c75e, type: 3}
+    - {fileID: 2800000, guid: c01541b8498619b4b9f5fdf42a10606e, type: 3}
+    - {fileID: 2800000, guid: 523983f820fafe14bb13848956666973, type: 3}
+    - {fileID: 2800000, guid: 64c2add7f9b56d04299692d5f6ee4ed4, type: 3}
+    - {fileID: 2800000, guid: 5f0c76906a1133c44a3eedde1a86fbab, type: 3}
+    - {fileID: 2800000, guid: bd7d894307fe4a44b82a8985bbf02d51, type: 3}
+    - {fileID: 2800000, guid: d9bf970c0d3e11849b2bfe0ca0e14e18, type: 3}
+    - {fileID: 2800000, guid: 2b45dd3fc3ab21644a2d9968228864dc, type: 3}
+    - {fileID: 2800000, guid: 1a45ddb01e89465479a34feef1aae842, type: 3}
+    - {fileID: 2800000, guid: 8c7bc547d3acb1c42ba3b4f2d43a1038, type: 3}
+    - {fileID: 2800000, guid: e90f0c6e458eef4429863670d8c0b423, type: 3}
+    - {fileID: 2800000, guid: b652dbff2af3e5e41bbf5554aad2ed0f, type: 3}
+    - {fileID: 2800000, guid: 209a74aac74d64b4d99c8d9738fc542a, type: 3}
+    - {fileID: 2800000, guid: 0f3dfbcd875cb92478d21b463a68f512, type: 3}
+    - {fileID: 2800000, guid: bca6aa7e4d0031b478155489459b5836, type: 3}
+    - {fileID: 21300000, guid: bca6aa7e4d0031b478155489459b5836, type: 3}
+    - {fileID: 2800000, guid: bea23ae3b4453e142b517840f238dcc6, type: 3}
+    - {fileID: 21300000, guid: bea23ae3b4453e142b517840f238dcc6, type: 3}
+    - {fileID: 2800000, guid: 90f1967f11297fb4bb6a70f75af5e8e5, type: 3}
+    - {fileID: 2800000, guid: 14ada1c802bdaab4e9005cddf5548814, type: 3}
+    - {fileID: 2800000, guid: f182c1074f95c71469a87fdb75357bc6, type: 3}
+    - {fileID: 2800000, guid: 70df98162c20113479f8e9033c1c2016, type: 3}
+    - {fileID: 2800000, guid: 08e03d9c39379b74681931d92fafb3dd, type: 3}
+    - {fileID: 2800000, guid: b9370f48b2c4a824eb78a47da7d6ab98, type: 3}
+    - {fileID: 2800000, guid: 7d41675c42530f84ab5bdece473443c6, type: 3}
+    - {fileID: 2800000, guid: 923e105f8e0864c4fa4687b26bb541ae, type: 3}
+    - {fileID: 2800000, guid: 484bdd4da90838641961a30573f0df78, type: 3}
+    - {fileID: 2800000, guid: 7727fd2209f016e498b03103724bce62, type: 3}
+    - {fileID: 2800000, guid: 4d312284567158f4994ebdfb082e2a0a, type: 3}
+    - {fileID: 2800000, guid: bdc6940a87db7a54c9f760ad1c9a4d02, type: 3}
+    - {fileID: 2800000, guid: 0ba3b9af62c14c34b8b5c9e18b5285c2, type: 3}
+    - {fileID: 2800000, guid: b29b395c53ed235448d9aaa4e5021677, type: 3}
+    - {fileID: 2800000, guid: e4b3813db7592d44c9cf716f708e5e46, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 78aef0600b80a8445a16a261acf5cc8b, type: 3}
+  - {fileID: 21300000, guid: 5f0c76906a1133c44a3eedde1a86fbab, type: 3}
+  - {fileID: 21300000, guid: 1a45ddb01e89465479a34feef1aae842, type: 3}
+  - {fileID: 21300000, guid: 7727fd2209f016e498b03103724bce62, type: 3}
+  - {fileID: 21300000, guid: bd7d894307fe4a44b82a8985bbf02d51, type: 3}
+  - {fileID: 21300000, guid: f0d5a8838e5e11f4288593fd243580b9, type: 3}
+  - {fileID: 21300000, guid: e48a55a3f558f0b4c9ee408869b2c75e, type: 3}
+  - {fileID: 21300000, guid: bea23ae3b4453e142b517840f238dcc6, type: 3}
+  - {fileID: 21300000, guid: 4d312284567158f4994ebdfb082e2a0a, type: 3}
+  - {fileID: 21300000, guid: 971df235186af534d9e81f0e20f70f03, type: 3}
+  - {fileID: 21300000, guid: 70df98162c20113479f8e9033c1c2016, type: 3}
+  - {fileID: 21300000, guid: f182c1074f95c71469a87fdb75357bc6, type: 3}
+  - {fileID: 21300000, guid: 8c7bc547d3acb1c42ba3b4f2d43a1038, type: 3}
+  - {fileID: 21300000, guid: 1785f757ee2ebc449aabfebc2c925081, type: 3}
+  - {fileID: 21300000, guid: 64c2add7f9b56d04299692d5f6ee4ed4, type: 3}
+  - {fileID: 21300000, guid: b9370f48b2c4a824eb78a47da7d6ab98, type: 3}
+  - {fileID: 21300000, guid: c01541b8498619b4b9f5fdf42a10606e, type: 3}
+  - {fileID: 21300000, guid: 14ada1c802bdaab4e9005cddf5548814, type: 3}
+  - {fileID: 21300000, guid: a9dfd3d8529a7e543944b32b74a3d969, type: 3}
+  - {fileID: 21300000, guid: 523983f820fafe14bb13848956666973, type: 3}
+  - {fileID: 21300000, guid: bdc6940a87db7a54c9f760ad1c9a4d02, type: 3}
+  - {fileID: 21300000, guid: 234e274a237c6b745a2eaa28cae82c14, type: 3}
+  - {fileID: 21300000, guid: 209a74aac74d64b4d99c8d9738fc542a, type: 3}
+  - {fileID: 21300000, guid: 3488a18b556b8424897c3f158d9b5189, type: 3}
+  - {fileID: 21300000, guid: d9bf970c0d3e11849b2bfe0ca0e14e18, type: 3}
+  - {fileID: 21300000, guid: 7d41675c42530f84ab5bdece473443c6, type: 3}
+  - {fileID: 21300000, guid: b29b395c53ed235448d9aaa4e5021677, type: 3}
+  - {fileID: 21300000, guid: 08e03d9c39379b74681931d92fafb3dd, type: 3}
+  - {fileID: 21300000, guid: 7b3ca6bc9dccd564f93a32a193c0ea63, type: 3}
+  - {fileID: 21300000, guid: 3bda580d24a3a0049ba8d3113b17822e, type: 3}
+  - {fileID: 21300000, guid: e4b3813db7592d44c9cf716f708e5e46, type: 3}
+  - {fileID: 21300000, guid: da347a3dfa746c14399b59d814605c6c, type: 3}
+  - {fileID: 21300000, guid: 484bdd4da90838641961a30573f0df78, type: 3}
+  - {fileID: 21300000, guid: 0f3dfbcd875cb92478d21b463a68f512, type: 3}
+  - {fileID: 21300000, guid: e90f0c6e458eef4429863670d8c0b423, type: 3}
+  - {fileID: 21300000, guid: bca6aa7e4d0031b478155489459b5836, type: 3}
+  - {fileID: 21300000, guid: e02229ae9afd4b24bbaca3ac1fe7b344, type: 3}
+  - {fileID: 21300000, guid: 2b45dd3fc3ab21644a2d9968228864dc, type: 3}
+  - {fileID: 21300000, guid: 923e105f8e0864c4fa4687b26bb541ae, type: 3}
+  - {fileID: 21300000, guid: 90f1967f11297fb4bb6a70f75af5e8e5, type: 3}
+  - {fileID: 21300000, guid: 188ed28faf25a0843bb7005eb869dca4, type: 3}
+  - {fileID: 21300000, guid: 0ba3b9af62c14c34b8b5c9e18b5285c2, type: 3}
+  - {fileID: 21300000, guid: b652dbff2af3e5e41bbf5554aad2ed0f, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - board_shop_3
+  - image_card_4
+  - image_card_silver_2
+  - white_shop
+  - image_card_5
+  - exchance_board_2
+  - icon ads_3
+  - image_vip_3
+  - coin_shop
+  - board_shop_basic
+  - shop_wood_bar
+  - shop_name_bar
+  - image_card_silver_3
+  - green_button_3
+  - image_card_3
+  - tag_sale_2
+  - image_card_1
+  - shadow_bar
+  - bar_vip_1
+  - image_card_2
+  - ticket_blue_shop
+  - board_shop_ads_1
+  - image_silver_card
+  - coin_board
+  - image_card_6
+  - vip_1
+  - clock_icon_shop
+  - tag_sale_1
+  - board_vip
+  - exchance_border
+  - coin_3_shop
+  - glow
+  - vip_3
+  - image_vip_1
+  - image_exchange_1
+  - image_vip_2
+  - bar_vip_2
+  - image_card_silver_1
+  - vip_2
+  - ribbon_vip
+  - ADS_ICON
+  - silver_ticket_1_shop
+  - image_exchange_2
+  m_RenderDataMap: {}
+  m_Tag: Shop
+  m_IsVariant: 0

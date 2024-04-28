@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Board
+  - HigleJoint2d
+  - Slot
+  - Nail
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Nail0
+  - board1
+  - board2
+  - board3
+  - board4
+  - board5
+  - board6
+  - board7
+  - Nail
+  - Nail1
+  - Nail2
+  - Nail3
+  - Nail4
+  - Nail5
+  - Nail6
+  - Nail7
+  - Nail8
+  - Nail9
+  - Nail10
+  - Nail11
+  - Nail12
+  - Nail13
+  - Nail14
+  - Nail15
+  - Slot
+  - AllIn
+  m_SortingLayers:
+  - name: Water
+    uniqueID: 1261394873
+    locked: 0
+  - name: Bg
+    uniqueID: 1923446003
+    locked: 0
+  - name: HigleJoint2d
+    uniqueID: 2214931155
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: CameraSortingLayer
+    uniqueID: 2591757855
+    locked: 0
+  - name: Key
+    uniqueID: 941912293
+    locked: 0
+  - name: HighestLayerForDistortionEffect
+    uniqueID: 157074981
+    locked: 0

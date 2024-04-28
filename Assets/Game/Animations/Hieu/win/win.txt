@@ -1,0 +1,17 @@
+win.png
+size:460,460
+filter:Linear,Linear
+pma:true
+eyes_L
+bounds:2,7,151,146
+offsets:1,1,153,148
+eyes_R
+bounds:306,311,151,146
+offsets:1,1,153,148
+head
+bounds:2,155,302,302
+offsets:1,1,304,304
+mouth_1
+bounds:306,128,181,90
+offsets:1,1,185,92
+rotate:90

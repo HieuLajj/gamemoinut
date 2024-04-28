@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: f366d6e86c92d4041ac23e9796b7b9fb
+timeCreated: 1709225773
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  externalObjects: {}
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Liberation Sans
+  fallbackFontReferences: []
+  customCharacters:
+  fontRenderingMode: 0
+  output:
+    hasEmptyFontData: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData:
+  assetBundleName: ce7ea3ead8c5c44f660ea352c1137a43.bundle_c9c7266d55555f35d910f52c8652b24e
+  assetBundleVariant:

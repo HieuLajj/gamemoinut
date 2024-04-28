@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 5fd5478a5e1961544b25cababfa70500
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 32
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Playpen Sans
+  - Noto Sans CJK
+  - Tiro Devanagari Hindi
+  - Noto Kufi Arabic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3e078e9943eea4b41bcb1bb31281ce0a, type: 3}
+  - {fileID: 12800000, guid: bfec7576ab2757c4b853a5a631f94e52, type: 3}
+  - {fileID: 12800000, guid: c371044d986c34b4ebc5dacea6b2b475, type: 3}
+  - {fileID: 12800000, guid: 9fdf067143eef034bb842ca4d0456e8a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

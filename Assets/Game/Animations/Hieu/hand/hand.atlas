@@ -1,0 +1,24 @@
+hand.png
+size:484,484
+filter:Linear,Linear
+arm
+bounds:316,2,139,133
+offsets:1,1,141,135
+finger_1
+bounds:369,286,111,195
+finger_1_1
+bounds:252,282,115,199
+hand_1
+bounds:161,40,141,153
+offsets:1,1,143,155
+rotate:90
+hand_1_1
+bounds:2,36,145,157
+offsets:1,1,147,159
+rotate:90
+hand_1_1 copy
+bounds:316,137,143,137
+offsets:1,1,145,139
+rotate:90
+shadow_1
+bounds:2,183,248,298

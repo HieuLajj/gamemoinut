@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RemoveAds
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 7205eeaca7c30904c93cc6fa5f3bec03, type: 3}
+    - {fileID: 2800000, guid: f4704c25a3a54884ab5dd122ce3a55de, type: 3}
+    - {fileID: 2800000, guid: 2a34a945d318eeb4b955578f81e43af6, type: 3}
+    - {fileID: 2800000, guid: cf2ee1a1df689f94b8ea27af1bfa5481, type: 3}
+    - {fileID: 2800000, guid: 2ec0d103cd785d840a52aef79bdc7d88, type: 3}
+    - {fileID: 2800000, guid: 66a12f9ae59014a4fab2dd82380fc4aa, type: 3}
+    - {fileID: 2800000, guid: d7af5ce719d52344db05d6dd3f409885, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: cf2ee1a1df689f94b8ea27af1bfa5481, type: 3}
+  - {fileID: 21300000, guid: 2ec0d103cd785d840a52aef79bdc7d88, type: 3}
+  - {fileID: 21300000, guid: f4704c25a3a54884ab5dd122ce3a55de, type: 3}
+  - {fileID: 21300000, guid: 2a34a945d318eeb4b955578f81e43af6, type: 3}
+  - {fileID: 21300000, guid: d7af5ce719d52344db05d6dd3f409885, type: 3}
+  - {fileID: 21300000, guid: 66a12f9ae59014a4fab2dd82380fc4aa, type: 3}
+  - {fileID: 21300000, guid: 7205eeaca7c30904c93cc6fa5f3bec03, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - obj_3
+  - remove_board_1
+  - ads_icon_2
+  - obj_2
+  - shadow_bar
+  - remove_board_2
+  - ADS_ICON
+  m_RenderDataMap: {}
+  m_Tag: RemoveAds
+  m_IsVariant: 0
