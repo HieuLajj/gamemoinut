@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HolesFreeSystem : MonoBehaviour
 {
+    public Stack StackHoles;
     private static HolesFreeSystem instance;
     public static HolesFreeSystem Instance
     {
@@ -21,9 +22,13 @@ public class HolesFreeSystem : MonoBehaviour
         }
     }
     public GameObject HoleFreePrefab;
+    private void Start() {
+        StackHoles = new Stack();
+    }
     public void SetupNumbers(int numbers){
         for(int i=0; i<numbers; i++){
-            Instantiate(HoleFreePrefab,transform.position,Quaternion.identity,transform);
+            HolesFree holefree = Instantiate(HoleFreePrefab,transform.position,Quaternion.identity,transform).GetComponent<HolesFree>();
+            StackHoles.Push(holefree);
         }
     }
 }

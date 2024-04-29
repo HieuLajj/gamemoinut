@@ -351,7 +351,27 @@ public class Nail_Item : MonoBehaviour, TInterface<Nail_Item>
         ResetImageNail();
       
     }
-   
+    public void ActiveWhenDown()
+    {
+#if UNITY_EDITOR
+        if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject() == true)
+        {
+            return;
+        }
+#else
+        // if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject() == true)
+        if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
+       
+            return;
+       }
+#endif
+    if(false){
+        HolesFree holefree = (HolesFree)HolesFreeSystem.Instance.StackHoles.Pop();
+        gameObject.transform.position = holefree.transform.position;
+    }else{
+        gameObject.transform.position = BoxsSystem.Instance.BoxItemsCurrent.GetBoxsChild().transform.position;
+    }
+    }
 
     // dùng khi bắt đầu lựa chọn đinh, đổi board cha sang kinematic để tránh tạo tương tác vật lý không mong muốn
     public void KinematicBoardParent()

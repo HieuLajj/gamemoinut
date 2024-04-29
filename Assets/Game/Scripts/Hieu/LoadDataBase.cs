@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
-
+public enum TypeCrew{
+    Screw_01
+}
 [System.Serializable]
 public struct Pos
 {
@@ -37,6 +39,19 @@ public struct ColorHieu
 public struct Ice{
     public bool on;
     public int piece;
+}
+[System.Serializable]
+public struct Crew{
+    public TypeCrew TypeScrew;
+    public bool isClick;
+    public bool isAuto;
+    
+}
+[System.Serializable]
+public struct Boxs{
+    public string TypeCL;
+    public Crew[] ListCrew;
+
 }
 [System.Serializable]
 public struct HandTut
@@ -876,6 +891,8 @@ public class LoadDataBase : MonoBehaviour
      private void HandSavableEditString_Boxs(string str)
     {
         Debug.Log(str);
+        Boxs boxs = JsonUtility.FromJson<Boxs>(str);
+        BoxsSystem.Instance.InitBox(boxs.TypeCL+""+boxs.ListCrew.Length);
         CheckTimeSetUpMap();
     }
 

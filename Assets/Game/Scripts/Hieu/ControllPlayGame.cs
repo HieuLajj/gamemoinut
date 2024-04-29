@@ -51,8 +51,8 @@ public class ControllPlayGame : MonoBehaviour
             RaycastHit2D[] hits = Physics2D.RaycastAll(mousePosition, Vector2.zero);
             foreach (RaycastHit2D hit in hits)
             {          
-                if (hit.collider.CompareTag("Slot")){           
-                    hit.transform.GetComponent<Slot_Item>().ActiveWhenDown();
+                if (hit.collider.CompareTag("Nail")){           
+                    hit.transform.GetComponent<Nail_Item>().ActiveWhenDown();
                 }
             }
         }

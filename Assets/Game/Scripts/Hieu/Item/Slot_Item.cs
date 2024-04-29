@@ -56,101 +56,22 @@ public class Slot_Item : MonoBehaviour, TInterface<Slot_Item>
     public void ActiveWhenDown()
     {
 
-        if (flag == 1)
-        {        
-            if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject() == true)
-            {
-               
-                return;
-            }
-            else
-            {             
-                flag = 2;
-            }
-        }
-        if (hasLock == true) {
-          //  Locked.CreateLocked(transform.position);
-          
-            return;
-        }
-        if (NailPullFeature.Instance.check && nail_item!=null)
-        {
-            hasNail = false;
-            nail_item.Furture_Destroy();
-            nail_item = null;
-            NailPullFeature.Instance.NotSetupFeature();
-         
-            return;
-        }
+
 
 #if UNITY_EDITOR
         if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject() == true)
         {
-            flag = 1;
-
             return;
         }
 #else
         // if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject() == true)
         if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
-       {
-            flag = 1;
-         
+       
             return;
        }
 #endif
+    gameObject.SetActive(false);
 
-        LevelController.Instance.ActiveActionUser();
-
-        if(Aditem != null)
-        {
-            //Aditem.animator.SetTrigger("play");
-            //Aditem = null;
-            CanvasManagerGamePlay.Instance.GameBoosterUI.nhan1.SetActive(false);
-            CanvasManagerGamePlay.Instance.GameBoosterUI.nhan2.SetActive(true);
-            GameInBooster.ActionBooster = BoosterAd;
-            GameInBooster.NameBooster = "holeStr";
-            GameInBooster.UsedBooster = 0;
-            UIEvents.Instance.ShowBoosterUI();
-            return;
-        }
-        
-
-        if (ControllPlayGame.Instance.targetNail == nail_item)
-        {
-            if(ControllPlayGame.Instance.targetNail != null)
-            {
-                ControllPlayGame.Instance.targetNail.ResetImageNail();
-
-                EventDisActiveNail?.Invoke();
-                ControllPlayGame.Instance.targetNail = null;
-            }
-          
-            return;
-        }
-
-        if (ControllPlayGame.Instance.targetNail != null && hasNail == false)
-        {
-          
-            ControllPlayGame.Instance.targetNail.KinematicBoardParent();
-            StartCoroutine(Checkboardinslot());
-        }
-        else
-        {
-          
-            if (nail_item != null && hasNail == true)
-            {
-                if (ControllPlayGame.Instance.targetNail != null)
-                {
-                    ControllPlayGame.Instance.targetNail.ResetImageNail();               
-                }   
-                ControllPlayGame.Instance.targetNail = nail_item;           
-                //thuc hien kinamatic cha cua nail
-                nail_item.ActiveImageNail();
-                EventActiveNail?.Invoke();
-
-            }
-        }
     }
     private void BoosterAd()
     {
