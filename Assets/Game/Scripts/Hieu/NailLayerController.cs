@@ -34,52 +34,7 @@ public class NailLayerController : MonoBehaviour
     }
 
     public int InputNumber(List<int> inputs, Nail_Item nailItem, int priority){
-        //tim neuu o tren cung nay    
-           // Slot_Item slot_Item = nailItem.transform.parent.GetComponent<Slot_Item>();
-        if (nailItem.transform.position.y >= maxynail-0.2f && priority == 1)
-        {         
-             CheckRootNail(nailItem, allxstring);
-             return 6;
-        }
-        char[] numberArray = null;
-        try
-        {
-            numberArray = allxstring.ToCharArray();
-        }
-        catch
-        {
-            Debug.Log("loi trong nailayer controller");
-            return 6;
-        }
-        
-        foreach(int input in inputs){
-            numberArray[input] = 'y';
-        }     
-        string numberString = string.Join("", numberArray); 
-        if(numberString == allxstring)
-        {
-            CheckRootNail(nailItem, allxstring);
-
-            return 31;
-        }
-        if(keyValuePairs.ContainsKey(numberString)){
-       
-            CheckRootNail(nailItem, numberString);
-            return keyValuePairs[numberString];
-        }else{
-            int m = IntIndexPosition();
-            if (m <= 30)
-            {
-                keyValuePairs[numberString] = m;
-                ChangeLayer(inputs, m);          
-                CheckRootNail(nailItem,numberString);   
-                return m;
-            }
-            else
-            {          
-                return FindTheClosetString(numberArray, nailItem, inputs);
-            }
-        }
+        return 6;
     }
 
     public void Sapxeplaithutu()

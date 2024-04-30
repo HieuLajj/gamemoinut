@@ -3177,9 +3177,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68b8139bf7a026459b3cd8ba65734be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  length2box: {fileID: 4647663408815069452, guid: d27223580266c134baaffb2796a101df, type: 3}
+  length3box: {fileID: 4647663408815069452, guid: d27223580266c134baaffb2796a101df, type: 3}
   boxsData: {fileID: 11400000, guid: 226699fe191f4934ea4c8d2f7b1bff97, type: 2}
   BoxItemsCurrent: {fileID: 0}
-  boxsItemList: []
 --- !u!1 &1495731863
 GameObject:
   m_ObjectHideFlags: 0
@@ -5931,6 +5932,8 @@ GameObject:
   - component: {fileID: 7293241172134804124}
   - component: {fileID: 7293241172134804121}
   - component: {fileID: 7376225286251518333}
+  - component: {fileID: 7376225286251518343}
+  - component: {fileID: 7376225286251518342}
   - component: {fileID: 7376225286251518294}
   - component: {fileID: 7376225286251518297}
   - component: {fileID: 7376225286251518296}
@@ -5944,8 +5947,6 @@ GameObject:
   - component: {fileID: 7376225286251518339}
   - component: {fileID: 7376225286251518340}
   - component: {fileID: 7376225286251518341}
-  - component: {fileID: 7376225286251518342}
-  - component: {fileID: 7376225286251518343}
   - component: {fileID: 7376225286251518344}
   - component: {fileID: 7376225286251518345}
   - component: {fileID: 7376225286251518346}

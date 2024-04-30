@@ -9,6 +9,7 @@ using Sirenix.OdinInspector;
 using DG.Tweening;
 public class Nail_Item : MonoBehaviour, TInterface<Nail_Item>
 {
+    public HingeJoint2D hingeJoint2D;
     public SpriteRenderer Outline;
     //pool
     private ObjectPool<Nail_Item> _pool;
@@ -365,12 +366,34 @@ public class Nail_Item : MonoBehaviour, TInterface<Nail_Item>
             return;
        }
 #endif
-    if(false){
-        HolesFree holefree = (HolesFree)HolesFreeSystem.Instance.StackHoles.Pop();
-        gameObject.transform.position = holefree.transform.position;
+    // if(false){
+    //     HolesFree holefree = (HolesFree)HolesFreeSystem.Instance.StackHoles.Pop();
+    //     gameObject.transform.position = holefree.transform.position;
+    // }else{
+    //     gameObject.transform.position = BoxsSystem.Instance.BoxItemsCurrent.GetBoxsChild().transform.position;
+    // }
+    BoxsChildItem boxsChildItem = BoxsSystem.Instance.BoxItemsCurrent.GetBoxsChild(nail.material);
+    if(boxsChildItem!=null){
+        gameObject.transform.position = boxsChildItem.transform.position;
+        BoxsSystem.Instance.BoxItemsCurrent.CheckCompleteBox();
     }else{
-        gameObject.transform.position = BoxsSystem.Instance.BoxItemsCurrent.GetBoxsChild().transform.position;
+        HolesFree holefree = (HolesFree)HolesFreeSystem.Instance.StackHoles.Pop();
+        if(holefree!=null){
+            holefree.nail_Item = this;
+            gameObject.transform.position = holefree.transform.position;
+        }        
     }
+
+    hingeJoint2D.enabled = false;
+    }
+
+    public void CheckAfterNewBox(){
+        if(BoxsSystem.Instance.BoxItemsCurrent==null)return;
+        BoxsChildItem boxsChildItem = BoxsSystem.Instance.BoxItemsCurrent.GetBoxsChild(nail.material);
+        if(boxsChildItem!=null){
+            gameObject.transform.position = boxsChildItem.transform.position;
+            BoxsSystem.Instance.BoxItemsCurrent.CheckCompleteBox();
+        }
     }
 
     // dùng khi bắt đầu lựa chọn đinh, đổi board cha sang kinematic để tránh tạo tương tác vật lý không mong muốn

@@ -14,4 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Datas:
   - Id: Blink3
-    PrefabBoxs: {fileID: 4647663408815069452, guid: d27223580266c134baaffb2796a101df, type: 3}
+    sprite: {fileID: 21300000, guid: 5fd6a8dd89500b64e8fde67403a29cc7, type: 3}
+  - Id: Green3
+    sprite: {fileID: 21300000, guid: 1784e48e2813a9b48895e59e4969a424, type: 3}
+  - Id: Blue3
+    sprite: {fileID: 21300000, guid: e23ac35416b5daa4389afa02046339f4, type: 3}
+  - Id: Violet3
+    sprite: {fileID: 21300000, guid: 83c6265545ce053409d8d5c713b7065b, type: 3}
+  - Id: Yellow3
+    sprite: {fileID: 21300000, guid: 0c16926147fee2f4583d0d63d79215fd, type: 3}

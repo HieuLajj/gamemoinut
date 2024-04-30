@@ -5,12 +5,13 @@ using UnityEngine;
 public class BoxsData: ScriptableObject
 {
    public List<BoxsItemData> Datas = new List<BoxsItemData>();
-   public GameObject GetBoxsItem(string nameid){
+   public Sprite GetBoxsItem(string nameid){
         for(int i=0; i<Datas.Count; i++){
             if(nameid==Datas[i].Id){
-                return Datas[i].PrefabBoxs;
+                return Datas[i].sprite;
             }
         }
+        Debug.Log("hiihihi");
         return null;
    }
 }
@@ -18,5 +19,5 @@ public class BoxsData: ScriptableObject
 public class BoxsItemData
 {
     public string Id;
-    public GameObject PrefabBoxs;
+    public Sprite sprite;
 }

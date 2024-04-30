@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class variationbarBoard : Board_Item
+public class tile2Board : Board_Item
 {
     public override bool Define_intersection(Vector3 positionM)
     {

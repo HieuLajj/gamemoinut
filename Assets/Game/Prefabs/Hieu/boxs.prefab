@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97f9471a4f0eb245a9c37bb5e19fe80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TypeScrew: 
+  TypeScrew: 0
   isClick: 0
   isOn: 0
 --- !u!1 &4374889080066997400
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97f9471a4f0eb245a9c37bb5e19fe80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TypeScrew: 
+  TypeScrew: 0
   isClick: 0
   isOn: 0
 --- !u!1 &4647663408815069452
@@ -276,6 +276,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02a2f8b67f2dd041a242d7160b547f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boxs:
+    TypeCL: 0
+    ListCrew: []
+  imagebox: {fileID: 129990785128769782}
   BoxsChildArray:
   - {fileID: 6512327493333719293}
   - {fileID: 3010856624421674155}
@@ -369,6 +373,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97f9471a4f0eb245a9c37bb5e19fe80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TypeScrew: 
+  TypeScrew: 0
   isClick: 0
   isOn: 0

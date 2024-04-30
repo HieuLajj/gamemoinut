@@ -3,7 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
+using Newtonsoft.Json;
+
+public enum TypeCL{
+    None,
+    Blink,
+    Green,
+    Blue,
+    Violet,
+    Yellow
+}
 public enum TypeCrew{
+    None,
     Screw_01
 }
 [System.Serializable]
@@ -49,7 +60,7 @@ public struct Crew{
 }
 [System.Serializable]
 public struct Boxs{
-    public string TypeCL;
+    public TypeCL TypeCL;
     public Crew[] ListCrew;
 
 }
@@ -69,7 +80,8 @@ public struct Board
     public Rot rot;
     public int layer;
     public string material;
-    //public ColorHieu color;
+    public int parent;
+    public ColorHieu color;
    // public Bomb bomb;
 }
 
@@ -93,7 +105,7 @@ public struct Nail
     public Scale scale;
     public Rot rot;
     public int parent;
-    public string TypeCrew;
+    public TypeCrew TypeCrew;
     public string material;
     public Ice Ice;
 }
@@ -525,6 +537,12 @@ public class LoadDataBase : MonoBehaviour
             CreatePhysic2dforboard();
             CheckBoardSetupMap();
             ControllerHieu.Instance.nailLayerController.SetupLayerBoard();
+            
+
+
+            //moi
+            BoxsSystem.Instance.SetCurrentBox();
+
 //            Timer.instance.Reset();
             // if (LevelController.Instance.LevelDifficule)
             // {
@@ -671,45 +689,20 @@ public class LoadDataBase : MonoBehaviour
         slotboarditem.transform.localRotation = Quaternion.identity;
         board.AddSlotforBoard(slotboarditem);
         HingeJoint2D hingeJoint = board.gameObject.AddComponent<HingeJoint2D>();
-        Vector3 vectoradd;
+        
         Vector3 positioninparent =board.transform.InverseTransformPoint(nail_item.transform.position);
         
-        if (board.spritemain.sprite.name == "bar")
-        {
-            if (positioninparent.magnitude < 0.01f)
-            {
-                vectoradd = Vector3.zero;
-            }
-            else
-            {
-                if (board.transform.position.x <= 0)
-                {
-                    vectoradd = new Vector3(0.015f, 0, 0);
-                   
-                }
-                else
-                {
-                    vectoradd = new Vector3(-0.015f, 0, 0);
-                }
-              
-            }
-        }
-        else
-        {
-            if (board.transform.position.x <= 0)
-            {
-                vectoradd = new Vector3(0.015f, 0, 0);
+        
+        hingeJoint.anchor = board.transform.InverseTransformPoint(nail_item.transform.position);
+        
+        
 
-            }
-            else
-            {
-                vectoradd = new Vector3(-0.015f, 0, 0);
-            }
-        }
-     
-        hingeJoint.anchor = board.transform.InverseTransformPoint(nail_item.transform.position + vectoradd);
-        
-        
+
+//moi
+nail_item.hingeJoint2D = hingeJoint;
+
+
+
         hingeJoint.enableCollision = true;
         nail_item.listSlotBoardItem.Add(slotboarditem);     
         boardCount--;
@@ -866,7 +859,9 @@ public class LoadDataBase : MonoBehaviour
     //}
     private void HandSavableEditString_Nail(string str)
     {
-        Nail nail = JsonUtility.FromJson<Nail>(str);    
+        Debug.Log(str);
+       // Nail nail = JsonUtility.FromJson<Nail>(str);    
+        Nail nail =  JsonConvert.DeserializeObject<Nail>(str);
         LoadNailAddressAble("nail",nail);
     }
 
@@ -891,8 +886,9 @@ public class LoadDataBase : MonoBehaviour
      private void HandSavableEditString_Boxs(string str)
     {
         Debug.Log(str);
-        Boxs boxs = JsonUtility.FromJson<Boxs>(str);
-        BoxsSystem.Instance.InitBox(boxs.TypeCL+""+boxs.ListCrew.Length);
+        Boxs boxs = JsonConvert.DeserializeObject<Boxs>(str);
+        Debug.Log(boxs.ListCrew.Length);
+        BoxsSystem.Instance.InitBox(boxs.TypeCL+""+boxs.ListCrew.Length,boxs.ListCrew.Length, boxs);
         CheckTimeSetUpMap();
     }
 
@@ -918,6 +914,12 @@ public class LoadDataBase : MonoBehaviour
         {
             case "tile17":
                 boardItem = tile17Spawner.Instance._pool.Get();
+                break;
+              case "tile1":
+                boardItem = tile1Spawner.Instance._pool.Get();
+                break;
+              case "tile2":
+                boardItem = tile2Spawner.Instance._pool.Get();
                 break;
             case "wavy":
                boardItem = WavySpawner.Instance._pool.Get();
@@ -958,12 +960,7 @@ public class LoadDataBase : MonoBehaviour
             case "ushaped":
                 boardItem = UshapedSpawner.Instance._pool.Get();
                 break;
-            case "variation_bar":
-                boardItem = VariationbarSpawner.Instance._pool.Get();
-                break;
-            case "wavebar":
-                boardItem = WavebarSpawner.Instance._pool.Get();
-                break;
+          
             case "vboard":
                 boardItem = VboardSpawner.Instance._pool.Get();
                 break;
@@ -1003,23 +1000,14 @@ public class LoadDataBase : MonoBehaviour
         boardItem.transform.localScale = new Vector3(board.scale.x, board.scale.y, board.scale.z);
        
         boardItem.spritemain.sortingOrder = board.layer + 5;
-        int layerboard = 7 + board.layer;
+        int layerboard = 7 + board.parent;
         boardItem.gameObject.layer = layerboard;
         if (layerboard >= MaxLayerBoard)
         {
             MaxLayerBoard = layerboard;
         }
-        //boardItem.spritemain.color = HandleColorForBoard(board.layer);
-        Material myMaterial = Resources.Load<Material>("Hieu\\MaterialsBoard\\"+board.material);
-        if (myMaterial != null)
-        {
-            boardItem.spritemain.material = myMaterial;
-            boardItem.materialBoard = myMaterial;
-        }
-        else
-        {
-            boardItem.spritemain.color = HandleColorForBoard(board.layer);
-        }
+        boardItem.spritemain.color = new Color(board.color.r, board.color.g, board.color.b, board.color.a);
+        
         ControllerHieu.Instance.rootlevel.listboard.Add(boardItem);
         CheckTimeSetUpMap();
     }
@@ -1092,11 +1080,26 @@ public class LoadDataBase : MonoBehaviour
                 ControllerHieu.Instance.rootlevel.litsnail_mydictionary.Remove(nail_Item.transform.position.ToString());
             }
             ControllerHieu.Instance.rootlevel.litsnail_mydictionary.Add(nail_Item.transform.position.ToString(), nail_Item);
-            if(nail_Item.transform.position.y > ControllerHieu.Instance.nailLayerController.maxynail)
-            {
-                ControllerHieu.Instance.nailLayerController.maxynail = nail_Item.transform.position.y;      
+            Color colornail = Color.white;
+            switch(nail.material){
+                case "pink":
+                    colornail = Color.red;
+                    break;
+                case "blue":
+                    colornail = Color.blue;
+                    break;
+                case "green":
+                    colornail = Color.green;
+                    break;
+                 case "violet":
+                    colornail = new Color((float)238/255, (float)130/255, (float)238/255,1);
+                    break;
+                 case "yellow":
+                  colornail = new Color(1, 1, 0,1);
+                    break;
+        
             }
-         
+            nail_Item.spriteRenderer.color = colornail;
 
             CheckTimeSetUpMap();
         }

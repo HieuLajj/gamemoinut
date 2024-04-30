@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WavebarSpawner : SpawnerHieu<WavebarSpawner, Board_Item, Board_Item>
+public class tile1Spawner : SpawnerHieu<tile1Spawner, Board_Item, Board_Item>
 {
 
 }
